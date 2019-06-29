@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<body>
+        <div class="container">
+                <form action="{% url 'create' %}">
+                    <h3> 제목 :</h3>
+                    <input type="text" name="title">
+                    <br>
+                    <h4> 본문 :</h4>
+                    <textarea cols=40 rows=10 name="body"></textarea>
+                    <br>
+                    <input class="btn btn-dark" type="submit" value="제출">
+                </form>
+        </div>
+        <!--  http method를 지정하지 않으면 GET 이 Default 값
+        get 방식은 입력한 내용이 주소에 그대로 노출됨 데이터 조회
+        post 방식은 노출이 되지 않음 데이터 생성
+        데이터 수정 put
+        데이터 삭제 delete
+        -->
+</body>
+{% endblock %}
